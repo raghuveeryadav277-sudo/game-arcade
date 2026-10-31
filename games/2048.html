@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2048 — GameZone</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="../index.html">🎮 Game<span>Zone</span></a>
+  <div class="header-actions">
+    <button class="sound-btn" type="button">🔊 Sound On</button>
+    <a class="home-link" href="../index.html">← Home</a>
+  </div>
+</header>
+<main class="game-page">
+  <a class="back-link" href="../index.html">← Back to GameZone</a>
+  <h1>🔢 2048</h1>
+  <p class="tagline">Slide, merge, reach 2048!</p>
+  <div class="hud">
+    <span>Score: <b id="score">0</b></span>
+    <span>Best: <b id="best">0</b></span>
+  </div>
+  <div class="game-area">
+    <div class="t2048-grid" id="grid"></div>
+    <div class="overlay" id="start-screen">
+      <h2>How to Play</h2>
+      <p>Use the arrow keys or swipe to slide all the tiles. When two tiles with the same number touch, they merge into one — and you score the new value. Reach the 2048 tile to win! If the board fills up with no moves left, the game is over.</p>
+      <button class="btn big" id="start-btn" type="button">▶ Start Game</button>
+    </div>
+    <div class="overlay hidden" id="gameover-screen">
+      <h2 id="end-title">Game Over</h2>
+      <p class="score-line" id="final-score"></p>
+      <p id="best-line"></p>
+      <button class="btn big" id="again-btn" type="button">↻ Play Again</button>
+      <a class="btn secondary" href="../index.html">← Back to GameZone</a>
+    </div>
+  </div>
+</main>
+<script src="../assets/shell.js"></script>
+<script src="../assets/games/2048.js"></script>
+</body>
+</html>

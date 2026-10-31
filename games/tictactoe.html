@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tic-Tac-Toe — GameZone</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="../index.html">🎮 Game<span>Zone</span></a>
+  <div class="header-actions">
+    <button class="sound-btn" type="button">🔊 Sound On</button>
+    <a class="home-link" href="../index.html">← Home</a>
+  </div>
+</header>
+<main class="game-page">
+  <a class="back-link" href="../index.html">← Back to GameZone</a>
+  <h1>❌ Tic-Tac-Toe</h1>
+  <p class="tagline">Three in a row wins!</p>
+  <div class="hud">
+    <span id="status">Your turn (X)</span>
+    <span class="spacer"></span>
+    <span>Wins: <b id="score">0</b></span>
+  </div>
+  <div class="game-area">
+    <div class="mode-row">
+      <button class="chip active" type="button" id="mode-cpu">🤖 vs Computer</button>
+      <button class="chip" type="button" id="mode-2p">👥 2 Players</button>
+    </div>
+    <div class="ttt-grid" id="grid"></div>
+    <div class="overlay" id="start-screen">
+      <h2>How to Play</h2>
+      <p>Tap a square to place your mark. Get three in a row — across, down, or diagonally — to win. In vs Computer mode you play X and the computer plays O (it blocks and wins when it can!). In 2 Player mode, take turns on the same screen.</p>
+      <button class="btn big" id="start-btn" type="button">▶ Start Game</button>
+    </div>
+    <div class="overlay hidden" id="gameover-screen">
+      <h2 id="end-title">You Win!</h2>
+      <p class="score-line" id="final-score"></p>
+      <p id="best-line"></p>
+      <button class="btn big" id="again-btn" type="button">↻ Play Again</button>
+      <a class="btn secondary" href="../index.html">← Back to GameZone</a>
+    </div>
+  </div>
+</main>
+<script src="../assets/shell.js"></script>
+<script src="../assets/games/tictactoe.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minesweeper — GameZone</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="../index.html">🎮 Game<span>Zone</span></a>
+  <div class="header-actions">
+    <button class="sound-btn" type="button">🔊 Sound On</button>
+    <a class="home-link" href="../index.html">← Home</a>
+  </div>
+</header>
+<main class="game-page">
+  <a class="back-link" href="../index.html">← Back to GameZone</a>
+  <h1>💣 Minesweeper</h1>
+  <p class="tagline">Clear the field — don’t touch a mine!</p>
+  <div class="hud">
+    <span>💣 Mines left: <b id="mines">10</b></span>
+    <span>Time: <b id="time">0:00</b></span>
+    <span>Best time: <b id="best">—</b></span>
+  </div>
+  <div class="game-area">
+    <div class="ms-grid" id="grid"></div>
+    <div class="overlay" id="start-screen">
+      <h2>How to Play</h2>
+      <p>Left-click (or tap) a square to reveal it. Numbers tell you how many mines touch that square. Right-click — or long-press on mobile — to place a flag where you think a mine is. Reveal every safe square to win. Your first click is always safe!</p>
+      <button class="btn big" id="start-btn" type="button">▶ Start Game</button>
+    </div>
+    <div class="overlay hidden" id="gameover-screen">
+      <h2 id="end-title">Boom!</h2>
+      <p class="score-line" id="final-score"></p>
+      <p id="best-line"></p>
+      <button class="btn big" id="again-btn" type="button">↻ Play Again</button>
+      <a class="btn secondary" href="../index.html">← Back to GameZone</a>
+    </div>
+  </div>
+</main>
+<script src="../assets/shell.js"></script>
+<script src="../assets/games/minesweeper.js"></script>
+</body>
+</html>

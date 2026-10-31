@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dodge Dash — GameZone</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="../index.html">🎮 Game<span>Zone</span></a>
+  <div class="header-actions">
+    <button class="sound-btn" type="button">🔊 Sound On</button>
+    <a class="home-link" href="../index.html">← Home</a>
+  </div>
+</header>
+<main class="game-page">
+  <a class="back-link" href="../index.html">← Back to GameZone</a>
+  <h1>💨 Dodge Dash</h1>
+  <p class="tagline">Dodge the blocks — survive as long as you can!</p>
+  <div class="hud">
+    <span>Time: <b id="score">0</b>s</span>
+    <span>Best: <b id="best">0</b>s</span>
+    <span class="spacer"></span>
+    <button class="btn secondary" id="pause-btn" type="button">⏸ Pause</button>
+  </div>
+  <div class="game-area">
+    <canvas id="game" width="480" height="480"></canvas>
+    <div class="overlay" id="start-screen">
+      <h2>How to Play</h2>
+      <p>Move your player with the Left/Right arrow keys — or drag your finger (or mouse) across the screen. Falling blocks get faster and denser the longer you survive. One hit ends the run. Your score is the seconds you survive!</p>
+      <button class="btn big" id="start-btn" type="button">▶ Start Game</button>
+    </div>
+    <div class="overlay hidden" id="gameover-screen">
+      <h2>Game Over</h2>
+      <p class="score-line" id="final-score"></p>
+      <p id="best-line"></p>
+      <button class="btn big" id="again-btn" type="button">↻ Play Again</button>
+      <a class="btn secondary" href="../index.html">← Back to GameZone</a>
+    </div>
+  </div>
+</main>
+<script src="../assets/shell.js"></script>
+<script src="../assets/games/dodge.js"></script>
+</body>
+</html>
