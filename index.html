@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GameZone — Free Browser Games, Play Instantly</title>
+<meta name="description" content="GameZone: 10 free browser games you can play instantly — Fruit Slice, Snake, Flappy Ball, Memory Match, Breakout, Whack-a-Mole, 2048, Minesweeper, Tic-Tac-Toe and Dodge Dash. No download, no sign-up.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="index.html">🎮 Game<span>Zone</span></a>
+  <div class="header-actions">
+    <button class="sound-btn" type="button">🔊 Sound On</button>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>GameZone</h1>
+  <p>Free Browser Games — Play Instantly, No Download</p>
+  <p class="sub">10 classic games, right in your browser. Your best scores are saved on this device.</p>
+</section>
+
+<!-- AdSense ready: ad slot goes here later (no ad code yet) -->
+
+<div class="controls">
+  <input id="search" class="search-box" type="search" placeholder="🔍 Search games… (try “snake” or “puzzle”)" aria-label="Search games">
+  <div class="chips">
+    <button class="chip active" type="button" data-cat="all">All</button>
+    <button class="chip" type="button" data-cat="action">⚡ Action</button>
+    <button class="chip" type="button" data-cat="puzzle">🧩 Puzzle</button>
+    <button class="chip" type="button" data-cat="classic">🏆 Classic</button>
+  </div>
+</div>
+
+<main class="grid" id="game-grid">
+
+  <article class="card" data-name="Fruit Slice" data-desc="slice flying fruit, avoid bombs" data-cat="action">
+    <div class="icon">🍉</div>
+    <span class="tag">Action</span>
+    <h2>Fruit Slice</h2>
+    <p>Slice flying fruit with a swipe. Dodge the bombs — you only have 3 lives!</p>
+    <span class="best" data-best="fruit-slice">Best: 0</span>
+    <a class="play-btn" href="games/fruit-slice.html">▶ Play</a>
+  </article>
+
+  <article class="card" data-name="Snake" data-desc="classic snake eat food grow longer" data-cat="classic">
+    <div class="icon">🐍</div>
+    <span class="tag">Classic</span>
+    <h2>Snake</h2>
+    <p>The timeless classic. Eat, grow, and don’t crash into yourself!</p>
+    <span class="best" data-best="snake">Best: 0</span>
+    <a class="play-btn" href="games/snake.html">▶ Play</a>
+  </article>
+
+  <article class="card" data-name="Flappy Ball" data-desc="flap through pipes timing game" data-cat="action">
+    <div class="icon">🎈</div>
+    <span class="tag">Action</span>
+    <h2>Flappy Ball</h2>
+    <p>Tap to flap, thread the pipes, and see how far you can fly.</p>
+    <span class="best" data-best="flappy">Best: 0</span>
+    <a class="play-btn" href="games/flappy.html">▶ Play</a>
+  </article>
+
+  <article class="card" data-name="Memory Match" data-desc="flip cards find matching pairs" data-cat="puzzle">
+    <div class="icon">🃏</div>
+    <span class="tag">Puzzle</span>
+    <h2>Memory Match</h2>
+    <p>Flip the cards and find all 8 pairs in as few moves as you can.</p>
+    <span class="best" data-best="memory" data-best-unit=" moves">Best: 0</span>
+    <a class="play-btn" href="games/memory.html">▶ Play</a>
+  </article>
+
+  <article class="card" data-name="Breakout" data-desc="paddle ball bricks arcade" data-cat="classic">
+    <div class="icon">🧱</div>
+    <span class="tag">Classic</span>
+    <h2>Breakout</h2>
+    <p>Bounce the ball, smash every brick, and clear the wall.</p>
+    <span class="best" data-best="breakout">Best: 0</span>
+    <a class="play-btn" href="games/breakout.html">▶ Play</a>
+  </article>
+
+  <article class="card" data-name="Whack-a-Mole" data-desc="fast reflexes hit the moles" data-cat="action">
+    <div class="icon">🔨</div>
+    <span class="tag">Action</span>
+    <h2>Whack-a-Mole</h2>
+    <p>30 seconds, 9 holes, endless moles. Whack fast — misses cost a point!</p>
+    <span class="best" data-best="whack">Best: 0</span>
+    <a class="play-btn" href="games/whack.html">▶ Play</a>
+  </article>
+
+  <article class="card" data-name="2048" data-desc="slide tiles merge numbers puzzle" data-cat="puzzle">
+    <div class="icon">🔢</div>
+    <span class="tag">Puzzle</span>
+    <h2>2048</h2>
+    <p>Slide the tiles, merge the numbers, and reach the 2048 tile.</p>
+    <span class="best" data-best="2048">Best: 0</span>
+    <a class="play-btn" href="games/2048.html">▶ Play</a>
+  </article>
+
+  <article class="card" data-name="Minesweeper" data-desc="find mines logic puzzle flags" data-cat="puzzle">
+    <div class="icon">💣</div>
+    <span class="tag">Puzzle</span>
+    <h2>Minesweeper</h2>
+    <p>Clear the 9×9 field without touching a mine. Flag what you suspect!</p>
+    <span class="best" data-best="minesweeper" data-best-unit="s">Best: 0</span>
+    <a class="play-btn" href="games/minesweeper.html">▶ Play</a>
+  </article>
+
+  <article class="card" data-name="Tic-Tac-Toe" data-desc="noughts crosses vs computer friend" data-cat="classic">
+    <div class="icon">❌</div>
+    <span class="tag">Classic</span>
+    <h2>Tic-Tac-Toe</h2>
+    <p>Three in a row wins. Play against the computer or a friend.</p>
+    <span class="best" data-best="tictactoe">Best: 0</span>
+    <a class="play-btn" href="games/tictactoe.html">▶ Play</a>
+  </article>
+
+  <article class="card" data-name="Dodge Dash" data-desc="dodge falling obstacles endless" data-cat="action">
+    <div class="icon">💨</div>
+    <span class="tag">Action</span>
+    <h2>Dodge Dash</h2>
+    <p>Dodge the falling blocks and survive as long as you can. It only gets faster!</p>
+    <span class="best" data-best="dodge">Best: 0</span>
+    <a class="play-btn" href="games/dodge.html">▶ Play</a>
+  </article>
+
+</main>
+
+<p class="no-results" id="no-results">No games match your search. Try another word!</p>
+
+<footer class="site-footer">
+  Made for fun — more games coming soon 🎮
+</footer>
+
+<script src="assets/shell.js"></script>
+</body>
+</html>
