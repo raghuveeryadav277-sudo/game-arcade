@@ -17,6 +17,10 @@
   var snake = [], dir = { x: 1, y: 0 }, nextDir = { x: 1, y: 0 };
   var food = null, score = 0, running = false, paused = false;
   var timer = null, stepMs = 140;
+  // Speed options (ms per step): Slow 200, Medium 140, Fast 90.
+  var SPEEDS = { slow: 200, medium: 140, fast: 90 };
+  var speed = localStorage.getItem("gamezone_snake_speed") || "medium";
+  if (!SPEEDS[speed]) speed = "medium";
 
   function updateHUD() {
     scoreEl.textContent = score;
@@ -102,6 +106,23 @@
     else if (k === "arrowright" || k === "d") { setDir(1, 0); e.preventDefault(); }
   });
 
+  // Speed picker on the start screen (remembered in localStorage).
+  var speedBtns = document.querySelectorAll("#speed-picker .chip[data-speed]");
+  function paintSpeed() {
+    speedBtns.forEach(function (b) {
+      b.classList.toggle("active", b.getAttribute("data-speed") === speed);
+    });
+  }
+  speedBtns.forEach(function (b) {
+    b.addEventListener("click", function () {
+      speed = b.getAttribute("data-speed");
+      localStorage.setItem("gamezone_snake_speed", speed);
+      paintSpeed();
+      GZ.beep(660, 0.06);
+    });
+  });
+  paintSpeed();
+
   document.querySelectorAll("#dpad button[data-dir]").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var d = btn.getAttribute("data-dir");
@@ -115,7 +136,7 @@
   function startGame() {
     snake = [{ x: 12, y: 12 }, { x: 11, y: 12 }, { x: 10, y: 12 }];
     dir = { x: 1, y: 0 }; nextDir = { x: 1, y: 0 };
-    score = 0; running = true; paused = false; stepMs = 140;
+    score = 0; running = true; paused = false; stepMs = SPEEDS[speed];
     food = randomFood();
     updateHUD();
     startScreen.classList.add("hidden");
